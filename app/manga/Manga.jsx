@@ -1,10 +1,8 @@
-export default function Manga({ id, title, img, description }) {
+export default function Manga({ title, img, description }) {
   return (
     <div>
-      <h1>
-        {id} - {title}
-      </h1>
-      <img src={img} alt="poster" style={{ height: 200 }} />
+      <h1>{title}</h1>
+      <img src={img} alt="poster" style={{ height: 300 }} />
       <p>{description}</p>
     </div>
   );

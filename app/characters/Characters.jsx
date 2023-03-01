@@ -1,4 +1,4 @@
-export default function Anime({ title, description, img }) {
+export default function Characters({ title, description, img }) {
   return (
     <div>
       <h1>{title}</h1>
