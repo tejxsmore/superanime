@@ -3,6 +3,7 @@ Welcome to our Anime Streaming Platform! Here you can enjoy your favorite anime 
 ## Getting Started
 
 To use our platform, simply create an account and log in. You can browse our extensive collection of anime titles and start watching right away.
+Website - https://superanime.vercel.app
 
 ## Features
 
