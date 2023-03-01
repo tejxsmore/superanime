@@ -2,7 +2,7 @@ import Anime from "./Anime";
 
 export default async function Home() {
   try {
-    const res = await fetch(`https://api.jikan.moe/v4/anime/`);
+    const res = await fetch(`https://kitsu.io/api/edge/anime`);
     if (!res.ok) {
       throw new Error("Data fetch Unsuccessfull");
     }
@@ -11,10 +11,10 @@ export default async function Home() {
       <div>
         {data.data.map((anime) => (
           <Anime
-            key={anime.mal_id}
-            title={anime.title}
-            description={anime.background}
-            img={anime.images.jpg.large_image_url}
+            key={anime.id}
+            title={anime.attributes.canonicalTitle}
+            description={anime.attributes.description}
+            img={anime.attributes.posterImage.original}
           />
         ))}
       </div>

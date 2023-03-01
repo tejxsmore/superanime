@@ -2,7 +2,7 @@ import Manga from "./Manga";
 
 export default async function Home() {
   try {
-    const res = await fetch(`https://api.jikan.moe/v4/manga/`);
+    const res = await fetch(`https://kitsu.io/api/edge/manga`);
     if (!res.ok) {
       throw new Error("Data fetch Unsuccessfull");
     }
@@ -12,10 +12,10 @@ export default async function Home() {
       <div>
         {data.map((manga) => (
           <Manga
-            key={manga.mal_id}
-            title={manga.title}
-            description={manga.background}
-            img={manga.images.jpg.large_image_url}
+            key={manga.id}
+            title={manga.attributes.canonicalTitle}
+            description={manga.attributes.description}
+            img={manga.attributes.posterImage.original}
           />
         ))}
       </div>
