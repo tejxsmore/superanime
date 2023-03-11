@@ -11,13 +11,13 @@ export default function Footer() {
         <div>
           <a
             href="https://github.com/tejxsmore/superanime"
-            className="bg-bgpurp px-6 py-2 m-2 rounded-md"
+            className="bg-bgpurp px-6 py-2 m-2 rounded-md hover:bg-light hover:text-bg hover:delay-150"
           >
             Github
           </a>
           <a
             href="https://linkedin.com/in/tejxsmore"
-            className="bg-bgpurp px-5 py-2 m-2 rounded-md"
+            className="bg-bgpurp px-5 py-2 m-2 rounded-md hover:bg-light hover:text-bg hover:delay-150"
           >
             LinkedIn
           </a>
