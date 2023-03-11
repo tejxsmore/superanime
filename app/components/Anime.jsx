@@ -9,7 +9,7 @@ export default async function Anime() {
     const data = await res.json();
     return (
       <div>
-        <h1 className="text-bgpurp m-2 font-semibold text-2xl">Anime</h1>
+        <h1 className="text-light m-2 font-semibold text-2xl">Anime</h1>
         <div className="flex overflow-x-auto overflow-y-hidden">
           {data.data.map((anime) =>
             anime.attributes.posterImage.medium ? (
