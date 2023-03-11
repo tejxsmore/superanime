@@ -6,12 +6,12 @@ export default async function Characters() {
     if (!res.ok) {
       throw new Error("Data fetch Unsuccessfull");
     }
-    const data = await res.json();
+    const { data } = await res.json();
     return (
       <div>
         <h1 className="text-light m-2 font-semibold text-2xl">Characters</h1>
         <div className="flex overflow-x-scroll overflow-y-hidden">
-          {data.data.map((char) =>
+          {data.map((char) =>
             char.attributes.image.original ? (
               <CharactersCard
                 key={char.id}

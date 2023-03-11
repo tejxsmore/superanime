@@ -18,5 +18,5 @@ module.exports = {
       light: "#ECF2FF",
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-gradient-mask-image")],
 };
