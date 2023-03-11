@@ -5,7 +5,11 @@ export default async function Banner() {
 
   return (
     <div className="gradient-mask-b-0 h-auto m-2">
-      <img src={banner} alt="Banner" className="gradient-mask-t-0" />
+      <img
+        src={banner}
+        alt="Banner"
+        className="gradient-mask-t-0 brightness-120"
+      />
     </div>
   );
 }
