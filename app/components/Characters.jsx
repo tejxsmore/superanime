@@ -8,16 +8,18 @@ export default async function Characters() {
     }
     const data = await res.json();
     return (
-      <div className="flex">
+      <div>
         <h1>Characters</h1>
-        {data.data.map((char) => (
-          <CharactersCard
-            key={char.id}
-            title={char.attributes.canonicalName}
-            description={char.attributes.description}
-            img={char.attributes.image.original}
-          />
-        ))}
+        <div className="flex overflow-x-scroll overflow-y-hidden">
+          {data.data.map((char) => (
+            <CharactersCard
+              key={char.id}
+              title={char.attributes.canonicalName}
+              description={char.attributes.description}
+              img={char.attributes.image.original}
+            />
+          ))}
+        </div>
       </div>
     );
   } catch (err) {

@@ -10,16 +10,18 @@ export default async function Manga() {
     const { data } = await res.json();
 
     return (
-      <div className="flex">
+      <div>
         <h1>Manga</h1>
-        {data.map((manga) => (
-          <MangaCard
-            key={manga.id}
-            title={manga.attributes.canonicalTitle}
-            description={manga.attributes.description}
-            img={manga.attributes.posterImage.original}
-          />
-        ))}
+        <div className="flex overflow-y-hidden overflow-x-scroll">
+          {data.map((manga) => (
+            <MangaCard
+              key={manga.id}
+              title={manga.attributes.canonicalTitle}
+              description={manga.attributes.description}
+              img={manga.attributes.posterImage.original}
+            />
+          ))}
+        </div>
       </div>
     );
   } catch (err) {

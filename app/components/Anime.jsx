@@ -8,16 +8,18 @@ export default async function Anime() {
     }
     const data = await res.json();
     return (
-      <div className="flex overflow-auto w-full m-4">
+      <div>
         <h1>Anime</h1>
-        {data.data.map((anime) => (
-          <AnimeCard
-            key={anime.id}
-            title={anime.attributes.canonicalTitle}
-            description={anime.attributes.description}
-            img={anime.attributes.posterImage.original}
-          />
-        ))}
+        <div className="flex overflow-x-auto overflow-y-hidden">
+          {data.data.map((anime) => (
+            <AnimeCard
+              key={anime.id}
+              title={anime.attributes.canonicalTitle}
+              description={anime.attributes.description}
+              img={anime.attributes.posterImage.original}
+            />
+          ))}
+        </div>
       </div>
     );
   } catch (err) {
