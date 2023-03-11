@@ -13,4 +13,4 @@ Our platform offers many features to enhance your anime viewing experience, incl
 - High-quality video streaming, so you can enjoy your anime in the best possible quality
 - A wide selection of anime titles, including popular shows and movies from Japan and around the world
 
-Thank you for choosing our Super Anime!
+Thank you for choosing our Super Anime!!
