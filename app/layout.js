@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Super Anime",
   description: "Find Latest Anime",

@@ -1,6 +1,6 @@
-import Anime from "./Anime";
+import AnimeCard from "./Card/AnimeCard";
 
-export default async function Home() {
+export default async function Anime() {
   try {
     const res = await fetch(`https://kitsu.io/api/edge/anime`);
     if (!res.ok) {
@@ -8,9 +8,10 @@ export default async function Home() {
     }
     const data = await res.json();
     return (
-      <div>
+      <div className="flex overflow-auto w-full m-4">
+        <h1>Anime</h1>
         {data.data.map((anime) => (
-          <Anime
+          <AnimeCard
             key={anime.id}
             title={anime.attributes.canonicalTitle}
             description={anime.attributes.description}

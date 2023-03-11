@@ -1,6 +1,6 @@
-import Characters from "./Characters";
+import CharactersCard from "./Card/CharactersCard";
 
-export default async function Home() {
+export default async function Characters() {
   try {
     const res = await fetch(`https://kitsu.io/api/edge/characters`);
     if (!res.ok) {
@@ -8,9 +8,10 @@ export default async function Home() {
     }
     const data = await res.json();
     return (
-      <div>
+      <div className="flex">
+        <h1>Characters</h1>
         {data.data.map((char) => (
-          <Characters
+          <CharactersCard
             key={char.id}
             title={char.attributes.canonicalName}
             description={char.attributes.description}

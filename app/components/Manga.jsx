@@ -1,17 +1,19 @@
-import Manga from "./Manga";
+import MangaCard from "./Card/MangaCard";
 
-export default async function Home() {
+export default async function Manga() {
   try {
     const res = await fetch(`https://kitsu.io/api/edge/manga`);
+
     if (!res.ok) {
       throw new Error("Data fetch Unsuccessfull");
     }
-
     const { data } = await res.json();
+
     return (
-      <div>
+      <div className="flex">
+        <h1>Manga</h1>
         {data.map((manga) => (
-          <Manga
+          <MangaCard
             key={manga.id}
             title={manga.attributes.canonicalTitle}
             description={manga.attributes.description}
