@@ -1,4 +1,4 @@
-import AnimeCard from "./Card/AnimeCard";
+import AnimeCard from "../Card/AnimeCard";
 
 export default async function Anime() {
   try {

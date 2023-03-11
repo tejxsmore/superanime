@@ -1,4 +1,4 @@
-import CharactersCard from "./Card/CharactersCard";
+import CharactersCard from "../Card/CharactersCard";
 
 export default async function Characters() {
   try {

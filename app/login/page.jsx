@@ -28,9 +28,9 @@ export default function Login() {
         <button className="py-2 my-5 text-xl w-full bg-button rounded-lg hover:bg-bg hover:text-light hover:delay-100">
           Login
         </button>
-        <p className="text-center my-5">
+        <p className="text-center my-5 text-light">
           Don't have an Account?{" "}
-          <span>
+          <span className="text-bg ">
             <a href="/register">Register</a>
           </span>
         </p>

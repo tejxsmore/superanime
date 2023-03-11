@@ -1,4 +1,4 @@
-import MangaCard from "./Card/MangaCard";
+import MangaCard from "../Card/MangaCard";
 
 export default async function Manga() {
   try {

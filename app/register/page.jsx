@@ -46,9 +46,9 @@ export default function Register() {
         <button className="py-2 my-5 text-xl w-full bg-button rounded-lg hover:bg-bg hover:text-light hover:delay-100">
           Register
         </button>
-        <p className="text-center my-5">
+        <p className="text-center my-5 text-light">
           Already have an Account?{" "}
-          <span>
+          <span className="text-bg ">
             <a href="/login">Login</a>
           </span>
         </p>
