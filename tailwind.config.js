@@ -11,6 +11,12 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      bg: "#18122B",
+      button: "#BAD7E9",
+      bgpurp: "#635985",
+      light: "#ECF2FF",
+    },
   },
   plugins: [],
 };

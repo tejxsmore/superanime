@@ -11,7 +11,7 @@ export default async function Manga() {
 
     return (
       <div>
-        <h1>Manga</h1>
+        <h1 className="text-bgpurp m-2 font-semibold text-2xl">Manga</h1>
         <div className="flex overflow-y-hidden overflow-x-scroll">
           {data.map((manga) => (
             <MangaCard

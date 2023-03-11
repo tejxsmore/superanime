@@ -9,7 +9,7 @@ export default async function Characters() {
     const data = await res.json();
     return (
       <div>
-        <h1>Characters</h1>
+        <h1 className="text-bgpurp m-2 font-semibold text-2xl">Characters</h1>
         <div className="flex overflow-x-scroll overflow-y-hidden">
           {data.data.map((char) => (
             <CharactersCard

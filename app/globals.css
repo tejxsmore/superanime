@@ -20,10 +20,10 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e7e2e2;
+  background: transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5b5b5;
+  background: transparent;
 }
