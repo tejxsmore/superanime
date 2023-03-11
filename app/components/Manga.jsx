@@ -13,14 +13,18 @@ export default async function Manga() {
       <div>
         <h1 className="text-bgpurp m-2 font-semibold text-2xl">Manga</h1>
         <div className="flex overflow-y-hidden overflow-x-scroll">
-          {data.map((manga) => (
-            <MangaCard
-              key={manga.id}
-              title={manga.attributes.canonicalTitle}
-              description={manga.attributes.description}
-              img={manga.attributes.posterImage.original}
-            />
-          ))}
+          {data.map((manga) =>
+            manga.attributes.posterImage.medium ? (
+              <MangaCard
+                key={manga.id}
+                title={manga.attributes.canonicalTitle}
+                description={manga.attributes.description}
+                img={manga.attributes.posterImage.medium}
+              />
+            ) : (
+              <div></div>
+            )
+          )}
         </div>
       </div>
     );

@@ -11,14 +11,18 @@ export default async function Anime() {
       <div>
         <h1 className="text-bgpurp m-2 font-semibold text-2xl">Anime</h1>
         <div className="flex overflow-x-auto overflow-y-hidden">
-          {data.data.map((anime) => (
-            <AnimeCard
-              key={anime.id}
-              title={anime.attributes.canonicalTitle}
-              description={anime.attributes.description}
-              img={anime.attributes.posterImage.original}
-            />
-          ))}
+          {data.data.map((anime) =>
+            anime.attributes.posterImage.medium ? (
+              <AnimeCard
+                key={anime.id}
+                title={anime.attributes.canonicalTitle}
+                description={anime.attributes.description}
+                img={anime.attributes.posterImage.medium}
+              />
+            ) : (
+              <div></div>
+            )
+          )}
         </div>
       </div>
     );

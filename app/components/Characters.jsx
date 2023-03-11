@@ -11,14 +11,18 @@ export default async function Characters() {
       <div>
         <h1 className="text-bgpurp m-2 font-semibold text-2xl">Characters</h1>
         <div className="flex overflow-x-scroll overflow-y-hidden">
-          {data.data.map((char) => (
-            <CharactersCard
-              key={char.id}
-              title={char.attributes.canonicalName}
-              description={char.attributes.description}
-              img={char.attributes.image.original}
-            />
-          ))}
+          {data.data.map((char) =>
+            char.attributes.image.original ? (
+              <CharactersCard
+                key={char.id}
+                title={char.attributes.canonicalName}
+                description={char.attributes.description}
+                img={char.attributes.image.original}
+              />
+            ) : (
+              <div></div>
+            )
+          )}
         </div>
       </div>
     );
