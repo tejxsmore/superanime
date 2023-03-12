@@ -8,11 +8,6 @@ export default function AnimeCard({ title, description, img, banner }) {
           className="object-contain border-2 border-bgpurp"
         />
       </div>
-      {/* <div>
-        <img src={banner} alt="Banner" />
-        <h1 className="text-xl font-bold">{title}</h1>
-        <p className="max-w-4xl">{`${description.slice(0, 300)} ...`}</p>
-      </div> */}
     </div>
   );
 }
