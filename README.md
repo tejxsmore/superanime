@@ -13,4 +13,11 @@ Our platform offers many features to enhance your anime viewing experience, incl
 - High-quality video streaming, so you can enjoy your anime in the best possible quality
 - A wide selection of anime titles, including popular shows and movies from Japan and around the world
 
+## Local
+
+- Open the project directory in your terminal.
+- Install the project dependencies by running the command 'npm install'
+- Start the development server by running the command 'npm run dev'
+- Open your web browser and navigate to http://localhost:3000 to view the running application.
+
 Thank you for choosing our Super Anime!!
