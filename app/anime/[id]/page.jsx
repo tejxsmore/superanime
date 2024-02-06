@@ -53,7 +53,7 @@ export default function AnimeId() {
 
           <div id="membershipDiv" className="flex justify-center py-4">
             <Link
-              href="   https://rzp.io/i/WKBbi3lms"
+              href="https://rzp.io/i/9y4vDreOC9"
               target="_blank"
               className="p-1 px-2 mb-4 bg-purple text-light font-semibold rounded-md"
             >
