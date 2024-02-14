@@ -1,8 +1,9 @@
 "use client";
-import Navbar from "@/app/components/Element/Navbar";
+import { usePathname } from "next/navigation";
 import { charData } from "@/public/data/charData";
 const { data } = charData;
-import { usePathname } from "next/navigation";
+
+import Navbar from "@/src/components/Element/Navbar";
 
 export default function CharacterId() {
   const path = usePathname();

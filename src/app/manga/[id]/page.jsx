@@ -1,20 +1,20 @@
 "use client";
-import Navbar from "@/app/components/Element/Navbar";
 import Link from "next/link";
-import Feedback from "@/app/components/Element/Feedback";
-import { animeData } from "@/public/data/animeData";
 import { usePathname } from "next/navigation";
+import { mangaData } from "@/public/data/mangaData";
+
+import Navbar from "@/src/components/Element/Navbar";
+import Feedback from "@/src/components/Element/Feedback";
 
 export default function AnimeId() {
   const path = usePathname();
   const id = path.slice(7) - 1;
 
-  const { data } = animeData;
+  const { data } = mangaData;
   const poster = data[id].attributes.posterImage.medium;
   const title = data[id].attributes.canonicalTitle;
   const detail = data[id].attributes.description;
   const start = data[id].attributes.startDate;
-  const episode = data[id].attributes.episodeCount;
   const youtube = data[id].attributes.youtubeVideoId;
   const feedback = data[id].feedbacks;
 
@@ -25,7 +25,7 @@ export default function AnimeId() {
       <div className="p-2">
         <Navbar />
       </div>
-      <div className="md:flex md:flex-row md:justify-between">
+      <div className=" md:flex md:flex-row md:justify-between">
         <div className="p-4">
           <img
             src={poster}
@@ -38,9 +38,6 @@ export default function AnimeId() {
           <h1 className="pb-4 text-5xl font-bold text-center">{title}</h1>
 
           <div className="flex py-4 justify-center">
-            <div className="bg-button text-bg p-1 px-2 mx-2 rounded-md">
-              <p className="font-semibold">Episodes : {episode}</p>
-            </div>
             <div className="bg-button text-bg p-1 px-2 mx-2 rounded-md">
               <p className="font-semibold">Start : {start}</p>
             </div>
@@ -63,18 +60,14 @@ export default function AnimeId() {
 
           <Feedback feedbacks={feedback} />
 
-          {youtube ? (
-            <div>
-              <iframe
-                className="w-full h-96 rounded-md py-4"
-                src={yt}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe>
-            </div>
-          ) : (
-            <div></div>
-          )}
+          <div>
+            <iframe
+              className="w-full h-96 rounded-md py-4"
+              src={yt}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
